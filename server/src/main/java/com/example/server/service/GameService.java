@@ -13,11 +13,13 @@ import com.example.server.repository.AnswerListRepository;
 import com.example.server.repository.GameOrderRepository;
 import com.example.server.repository.RoomRepository;
 import com.example.server.repository.RoomUserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class GameService {
 
     public static RoomRepository roomRepository;

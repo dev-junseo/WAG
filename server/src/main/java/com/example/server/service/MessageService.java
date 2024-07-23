@@ -9,12 +9,14 @@ import com.example.server.dto.GameUserDto;
 import com.example.server.exception.NoSuchGameOrderException;
 import com.example.server.repository.GameOrderRepository;
 import com.example.server.repository.RoomUserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class MessageService {
 
     public static RoomUserRepository roomUserRepository;
