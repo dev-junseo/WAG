@@ -12,6 +12,7 @@ import com.example.server.payload.request.RoomCreateRequest;
 import com.example.server.payload.response.RoomResponse;
 import com.example.server.repository.*;
 import com.example.server.security.UserPrincipal;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +22,7 @@ import java.util.Optional;
 
 @Service
 @Transactional
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class RoomService {
     public static RoomRepository roomRepository;
     public static RoomUserRepository roomUserRepository;
