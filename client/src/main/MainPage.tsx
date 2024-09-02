@@ -157,7 +157,7 @@ function MainPage({ dark }: ComponentProps) {
       <div className="sm:mt-0 mt-20">
         {theme === "light" ? (
           <div className="flex justify-center items-center">
-            <img className={`relative w-2/3 ${isClicked ? 'clicked' : ''}`} src="images/WAG_white.2.png" 
+            <img className={`relative w-3/5 ${isClicked ? 'clicked' : ''}`} src="images/WAG_white.2.png" 
               alt="logo light mode"
               onClick={() => {
                 handleLightLogoClick();
@@ -169,7 +169,7 @@ function MainPage({ dark }: ComponentProps) {
           </div>
         ) : (
           <div className="flex justify-center items-center "> 
-            <img className={`relative w-2/3 ${isClicked ? 'clicked' : ''}`} src="images/WAG_dark.2.png" 
+            <img className={`relative w-3/5 ${isClicked ? 'clicked' : ''}`} src="images/WAG_dark.2.png" 
               alt="logo light mode"
               onClick={() => {
                 handleDarkLogoClick();
