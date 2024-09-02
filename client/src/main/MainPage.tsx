@@ -111,6 +111,10 @@ function MainPage({ dark }: ComponentProps) {
     navigate("/CreateRoom"); // 페이지 이동 처리
   };
   
+  const handleGoToSinglePlayground = () => {
+    window.open('https://splendorous-conkies-8e58b1.netlify.app/','_self');
+  }
+
   const handleLightLogoClick = () => {
     
     const playSound = () => {
@@ -186,6 +190,9 @@ function MainPage({ dark }: ComponentProps) {
           </Button>
           <Button size="lg" onClick={openModal}>
             입장코드 입력
+          </Button>
+          <Button size="lg" onClick={handleGoToSinglePlayground}>
+            심심하잖아 드루와
           </Button>
         </div>
       </div>
