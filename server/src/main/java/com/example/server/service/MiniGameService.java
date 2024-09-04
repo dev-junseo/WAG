@@ -26,7 +26,7 @@ public class MiniGameService {
 
     public String postRanking(MiniGameRankingRequest miniGameRankingRequest){
         if(miniGameRankingRequest.getNickname().equals("") || miniGameRankingRequest.getNickname()==null)
-            miniGameRankingRequest.setNickname("닉네임 적으랬는데 아무 것도 안적은 사람");
+            miniGameRankingRequest.setNickname("---");
 
         Optional<MiniGameRanking> miniGameRankingOptional = miniGameRepository.findByNickname(miniGameRankingRequest.getNickname());
         if(miniGameRankingOptional.isPresent()){
