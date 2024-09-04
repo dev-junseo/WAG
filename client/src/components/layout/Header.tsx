@@ -19,6 +19,8 @@ type ComponentProps = Props & PropsFromRedux;
 const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
 
   const [play, setPlay] = useState(false);
+  const [soundEffectStatusValue, ] = useState(soundEffectStatus);
+  const [isClicked, setIsClicked] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
@@ -63,9 +65,60 @@ const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
     return userAgent.includes('Chrome') || userAgent.includes('Safari');
   }
 
+  const handleLightLogoClick = () => {
+    
+    const playSound = () => {
+      const audio = new Audio('audio/lightmode_wag.mp3'); // 새로운 audio 요소 생성
+      audio.play(); // 소리를 재생합니다.
+    };
+    
+    if (soundEffectStatusValue){
+      playSound();
+    }
+    
+  }
+
+  const handleDarkLogoClick = () => {
+    
+    const playSound = () => {
+      const audio = new Audio('audio/darkmode_wag.mp3'); // 새로운 audio 요소 생성
+      audio.play(); // 소리를 재생합니다.
+    };
+    
+    if (soundEffectStatusValue){
+      playSound();
+    }
+    
+  }
+
   return (
     <header className="m-5 z-50">
       <div className="flex justify-end z-50">
+        <div className="absolute left-10 top-7">
+      {dark ? (
+
+<img className={`w-20 h-16 ${isClicked ? 'clicked' : ''}`} src="images/WAG_dark.2.png" 
+  alt="logo dark mode"
+  onClick={() => {
+    handleDarkLogoClick();
+    setIsClicked(true); // 클릭될 때마다 isClicked 상태를 true로 설정하여 애니메이션을 발생시킵니다.
+    setTimeout(() => setIsClicked(false), 200);
+    }}>
+
+  </img>
+  
+    ) : (
+      <img className={`w-20 h-16 ${isClicked ? 'clicked' : ''}`} src="images/WAG_white.2.png" 
+      alt="logo light mode"
+      onClick={() => {
+        handleLightLogoClick();
+        setIsClicked(true); // 클릭될 때마다 isClicked 상태를 true로 설정하여 애니메이션을 발생시킵니다.
+        setTimeout(() => setIsClicked(false), 200);
+        }}>
+
+      </img>
+    )}
+    </div>
         <audio ref={audioRef} src='audio/main_theme.mp3' loop />
         {isChrome() ? (
           <>

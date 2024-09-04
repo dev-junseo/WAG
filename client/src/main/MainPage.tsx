@@ -169,11 +169,7 @@ function MainPage({ dark }: ComponentProps) {
           <div className="flex justify-center items-center">
             <img className={`relative w-2/4 ${isClicked ? 'clicked' : ''}`} src="images/yangSaeChanGame.png" 
               alt="logo light mode"
-              onClick={() => {
-                handleLightLogoClick();
-                setIsClicked(true); // 클릭될 때마다 isClicked 상태를 true로 설정하여 애니메이션을 발생시킵니다.
-                setTimeout(() => setIsClicked(false), 200);
-                }}>
+            >
 
               </img>
           </div>
@@ -181,11 +177,7 @@ function MainPage({ dark }: ComponentProps) {
           <div className="flex justify-center items-center "> 
             <img className={`relative w-2/4 ${isClicked ? 'clicked' : ''}`} src="images/yangSaeChanGame.png" 
               alt="logo light mode"
-              onClick={() => {
-                handleDarkLogoClick();
-                setIsClicked(true); // 클릭될 때마다 isClicked 상태를 true로 설정하여 애니메이션을 발생시킵니다.
-                setTimeout(() => setIsClicked(false), 200);
-                }}>
+          >
 
               </img>
           </div>
