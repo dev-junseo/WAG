@@ -19,7 +19,6 @@ type ComponentProps = Props & PropsFromRedux;
 const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
 
   const [play, setPlay] = useState(false);
-  const [soundEffectStatusValue, ] = useState(soundEffectStatus);
   const [isClicked, setIsClicked] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -72,7 +71,7 @@ const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
       audio.play(); // 소리를 재생합니다.
     };
     
-    if (soundEffectStatusValue){
+    if (playSoundEffect){
       playSound();
     }
     
@@ -85,7 +84,7 @@ const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
       audio.play(); // 소리를 재생합니다.
     };
     
-    if (soundEffectStatusValue){
+    if (playSoundEffect){
       playSound();
     }
     
