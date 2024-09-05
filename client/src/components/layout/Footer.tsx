@@ -37,7 +37,7 @@ const Footer = ({ dark, toggleDarkMode }: ComponentProps) => {
             © WAG!
           </div>
           <div>
-            v1.0.0
+            v1.0.1
           </div>
       </footer>
 </FullLayout>
