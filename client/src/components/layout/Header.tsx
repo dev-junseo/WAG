@@ -92,8 +92,8 @@ const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
 
   return (
     <header className="m-5 z-50">
-      <div className="flex justify-end z-50">
-        <div className="absolute left-10 top-7">
+      <div className="flex justify-between z-50">
+        <div className="relative top-2">
       {dark ? (
 
 <img className={`w-20 h-16 ${isClicked ? 'clicked' : ''}`} src="images/WAG_dark.2.png" 
@@ -118,6 +118,7 @@ const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
       </img>
     )}
     </div>
+    <div className="flex justify-between z-50">
         <audio ref={audioRef} src='audio/main_theme.mp3' loop />
         {isChrome() ? (
           <>
@@ -206,6 +207,7 @@ const Header = ({ dark, toggleDarkMode }: ComponentProps) => {
             </RulesModal>
           </>
         ) : null}
+        </div>
       </div>
     </header>
   );
